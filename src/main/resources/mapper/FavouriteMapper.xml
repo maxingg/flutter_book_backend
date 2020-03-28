@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.maxingg.flutter_book_backend.dao.mapper.FavouriteMapper">
+    <insert id="addFav">
+        insert into favourites (user_id, book_id) values (#{userId}, #{bookId})
+    </insert>
+    <delete id="delFav">
+        delete from favourites where user_id = #{userId} and book_id = #{bookId}
+    </delete>
+    <select id="getAllFavByUserId" resultType="java.lang.Integer">
+        select * from favourites where user_id = #{userId}
+    </select>
+
+    <select id="findFav" resultType="com.maxingg.flutter_book_backend.dao.entity.Favourite">
+        select * from favourites where user_id = #{userId} and book_id = #{bookId}
+    </select>
+</mapper>

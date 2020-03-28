@@ -25,4 +25,10 @@ public class BookServiceImpl implements BookService {
     public List<Book> getBooksByTitle(String title) {
         return bookMapper.getBooksByTitle(title);
     }
+
+    @Override
+    public List<Book> getBooksByIds(List<Integer> list) {
+        return bookMapper.getBooksByIds(list);
+    }
+
 }

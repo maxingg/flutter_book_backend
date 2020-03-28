@@ -7,4 +7,10 @@
     <select id="getBooksByTitle" resultType="com.maxingg.flutter_book_backend.dao.entity.Book">
         select * from books where title like concat("%", #{title} ,"%")
     </select>
+    <select id="getBooksByIds" resultType="com.maxingg.flutter_book_backend.dao.entity.Book">
+        select * from books where id in
+        <foreach collection="list" item="id" index="index" open="(" separator="," close=")">
+        #{id}
+    </foreach>
+    </select>
 </mapper>

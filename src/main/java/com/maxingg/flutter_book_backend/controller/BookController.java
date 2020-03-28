@@ -22,6 +22,7 @@ public class BookController {
     @ApiOperation("获取某一分类中的精选书籍")
     @UserLoginToken
     @GetMapping("/category")
+    @ResponseBody
     public List<Book> getBooksByCategory(@RequestParam("category") String cat) throws NotFoundException{
         return bookService.getBooksByCat(cat);
     }
@@ -29,6 +30,7 @@ public class BookController {
     @UserLoginToken
     @ApiOperation("搜索特定书籍")
     @GetMapping("/books")
+    @ResponseBody
     public List<Book> getBookByTitle(@RequestParam("title") String title) throws NotFoundException {
         return bookService.getBooksByTitle(title);
     }

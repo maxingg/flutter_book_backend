@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.maxingg</groupId>
     <artifactId>flutter_book_backend</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>flutter_book_backend</name>
     <description>backend for flutter_book</description>
 

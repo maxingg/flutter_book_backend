@@ -9,4 +9,6 @@ public interface BookService {
     List<Book> getBooksByCat(String cat);
 
     List<Book> getBooksByTitle(String title);
+
+    List<Book> getBooksByIds(List<Integer> list);
 }
