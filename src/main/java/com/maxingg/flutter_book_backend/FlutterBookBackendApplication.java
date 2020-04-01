@@ -8,10 +8,14 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 @SpringBootApplication
 @MapperScan("com.maxingg.flutter_book_backend.dao.mapper")
-public class FlutterBookBackendApplication {
+public class FlutterBookBackendApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(FlutterBookBackendApplication.class, args);
     }
 
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return super.configure(builder);
+    }
 }

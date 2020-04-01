@@ -8,7 +8,7 @@
         delete from favourites where user_id = #{userId} and book_id = #{bookId}
     </delete>
     <select id="getAllFavByUserId" resultType="java.lang.Integer">
-        select * from favourites where user_id = #{userId}
+        select book_id from favourites where user_id = #{userId}
     </select>
 
     <select id="findFav" resultType="com.maxingg.flutter_book_backend.dao.entity.Favourite">

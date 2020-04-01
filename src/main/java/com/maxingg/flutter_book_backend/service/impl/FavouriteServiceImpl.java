@@ -16,13 +16,13 @@ public class FavouriteServiceImpl implements FavouriteService {
     @Autowired
     private FavouriteMapper favouriteMapper;
     @Override
-    public boolean addFav(Favourite fav) {
-        return favouriteMapper.addFav(fav);
+    public boolean addFav(int userId, int bookId) {
+        return favouriteMapper.addFav(userId, bookId);
     }
 
     @Override
-    public boolean delFav(Favourite fav) {
-        return favouriteMapper.delFav(fav);
+    public boolean delFav(int userId, int bookId) {
+        return favouriteMapper.delFav(userId, bookId);
     }
 
     @Override
@@ -31,8 +31,8 @@ public class FavouriteServiceImpl implements FavouriteService {
     }
 
     @Override
-    public boolean isExisted(Favourite fav) {
-        if(favouriteMapper.findFav(fav) != null)
+    public boolean isExisted(int userId, int bookId) {
+        if(favouriteMapper.findFav(userId, bookId) != null)
             return true;
         return false;
     }

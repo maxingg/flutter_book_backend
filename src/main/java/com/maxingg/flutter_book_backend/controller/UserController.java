@@ -59,7 +59,7 @@ public class UserController {
     }
 
     @ApiOperation("注册")
-    @PostMapping("/newuser")
+    @PostMapping("/users")
     public ResponseEntity<Map<String, Object>> register(@RequestBody User user) {
         Map<String, Object> map = new HashMap<>();
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
@@ -74,7 +74,7 @@ public class UserController {
     }
 
     @UserLoginToken
-    @GetMapping("/Message")
+    @GetMapping("/message")
     public String getMessage(){
         return "你已通过验证";
     }
